@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import SuccessMessage from "./success";
+import { Link } from "react-router-dom";
 
 import './style.css';
 
@@ -62,7 +63,8 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="submit">Login</button>
+      
+        <Link to={`/productspage`}> <button  type="submit">Login</button></Link>
       </form>
       {showSuccessMessage && <SuccessMessage message="Login successful! Redirecting to products page..." />}
     </div>
